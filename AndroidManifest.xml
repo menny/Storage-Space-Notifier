@@ -7,19 +7,27 @@
 
     <application android:icon="@drawable/icon" android:label="@string/app_name">
 	    
-	    <!-- receivers for outside events -->
-	    <receiver android:name=".PackagesChangedReceiver">
-	    	<intent-filter>
-	    		<category android:name="android.intent.category.DEFAULT" />
-	    		<action android:name="android.intent.action.PACKAGE_CHANGED"/>
-	    		<action android:name="android.intent.action.PACKAGE_REMOVED"/>
-	    		<action android:name="android.intent.action.PACKAGE_ADDED"/>
-	    		<action android:name="android.intent.action.PACKAGE_INSTALL"/>
-	    		<action android:name="android.intent.action.PACKAGE_REPLACED"/>
-	    		<data android:scheme="package" />
-	    	</intent-filter>	    	
-	    </receiver>
-	    
+	<!-- receivers for outside events -->
+	<receiver android:name=".PackagesChangedReceiver">
+		<intent-filter>
+			<category android:name="android.intent.category.DEFAULT" />
+			
+			<action android:name="android.intent.action.PACKAGE_CHANGED"/>
+			<action android:name="android.intent.action.PACKAGE_REMOVED"/>
+			<action android:name="android.intent.action.PACKAGE_ADDED"/>
+			<action android:name="android.intent.action.PACKAGE_INSTALL"/>
+			<action android:name="android.intent.action.PACKAGE_REPLACED"/>
+			
+			<data android:scheme="package" />
+		</intent-filter>	    	
+	</receiver>
+	
+	<receiver android:name=".MessagesReceiver">
+		<intent-filter>
+			<action android:name="android.provider.Telephony.SMS_RECEIVED" />
+		</intent-filter>
+	</receiver>
+        
 	<receiver android:name=".BootReceiver">
 		<intent-filter>
 			<action android:name="android.intent.action.BOOT_COMPLETED"/>
@@ -32,5 +40,6 @@
     </application>
     
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.RECEIVE_SMS" />
     
 </manifest>

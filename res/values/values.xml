@@ -1,4 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 	<integer name="storage_space_check_interval_milliseconds">900000</integer>
+	<integer name="storage_space_check_warning_bytes_limit">15000000</integer>
+	<integer name="storage_space_check_critical_bytes_limit">8000000</integer>
 </resources>
