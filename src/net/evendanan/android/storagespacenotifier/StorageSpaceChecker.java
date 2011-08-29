@@ -1,3 +1,8 @@
+/* The following code was written by Menny Even Danan
+ * and is released under the APACHE 2.0 license
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
 package net.evendanan.android.storagespacenotifier;
 
 import java.io.File;
@@ -35,22 +40,6 @@ public class StorageSpaceChecker {
 			
 			if (deviceInternalSpaceFreeSpace <= criticalLimit)
 			{
-				Notification notification = new Notification(R.drawable.icon, res.getText(R.string.low_storage_warning_title), System.currentTimeMillis());
-
-				Intent notificationIntent = new Intent(Settings.ACTION_MANAGE_APPLICATIONS_SETTINGS);
-				PendingIntent contentIntent = PendingIntent.getActivity(cntxt, 0, notificationIntent, 0);
-
-				notification.setLatestEventInfo(cntxt,
-						res.getText(R.string.low_storage_warning_title), 
-						res.getText(R.string.low_storage_warning_message),
-						contentIntent);
-				notification.flags |= Notification.FLAG_AUTO_CANCEL;
-				notification.flags |= Notification.FLAG_ONLY_ALERT_ONCE;
-				// notifying
-				nm.notify(NOTIFICATION_ID, notification);
-			}
-			else if (deviceInternalSpaceFreeSpace <= warningLimit)
-			{
 				Notification notification = new Notification(R.drawable.icon, res.getText(R.string.low_storage_critical_title), System.currentTimeMillis());
 
 				Intent notificationIntent = new Intent(Settings.ACTION_MANAGE_APPLICATIONS_SETTINGS);
@@ -63,6 +52,22 @@ public class StorageSpaceChecker {
 				notification.flags |= Notification.FLAG_ONGOING_EVENT;
 				notification.flags |= Notification.FLAG_NO_CLEAR;
 				notification.defaults |= Notification.DEFAULT_ALL;
+				// notifying
+				nm.notify(NOTIFICATION_ID, notification);
+			}
+			else if (deviceInternalSpaceFreeSpace <= warningLimit)
+			{
+				Notification notification = new Notification(R.drawable.icon, res.getText(R.string.low_storage_warning_title), System.currentTimeMillis());
+
+				Intent notificationIntent = new Intent(Settings.ACTION_MANAGE_APPLICATIONS_SETTINGS);
+				PendingIntent contentIntent = PendingIntent.getActivity(cntxt, 0, notificationIntent, 0);
+
+				notification.setLatestEventInfo(cntxt,
+						res.getText(R.string.low_storage_warning_title), 
+						res.getText(R.string.low_storage_warning_message),
+						contentIntent);
+				notification.flags |= Notification.FLAG_AUTO_CANCEL;
+				notification.flags |= Notification.FLAG_ONLY_ALERT_ONCE;
 				// notifying
 				nm.notify(NOTIFICATION_ID, notification);
 			}

@@ -1,3 +1,8 @@
+/* The following code was written by Menny Even Danan
+ * and is released under the APACHE 2.0 license
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ */
 package net.evendanan.android.storagespacenotifier;
 
 import android.app.AlarmManager;
@@ -13,6 +18,7 @@ public class BootReceiver extends BroadcastReceiver {
 
 	@Override
 	public void onReceive(Context cntxt, Intent data) {
+		Log.i(TAG,"Welcome to net.evendanan.android.storagespacenotifier (c) Menny Even Danan 2011, under the Apache2 license. This application is licensed to Beres, LTD Israel to use on Sony-Ericsson X8 devices. See https://github.com/menny/Storage-Space-Notifier for source code.");
 		Log.i(TAG, "Device booted. Checking internal storage...");
 		StorageSpaceChecker.check(cntxt);
 		//starting timer
