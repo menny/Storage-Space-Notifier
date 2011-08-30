@@ -53,6 +53,7 @@ public class StorageSpaceChecker {
 						contentIntent);
 				notification.flags |= Notification.FLAG_ONGOING_EVENT;
 				notification.flags |= Notification.FLAG_NO_CLEAR;
+				notification.flags |= Notification.FLAG_ONLY_ALERT_ONCE;
 				notification.defaults |= Notification.DEFAULT_ALL;
 				// notifying
 				nm.notify(NOTIFICATION_ID, notification);
