@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+	<!-- 
     <string name="low_storage_warning_title">שים לב, נפח האחסון קטן!</string>
     <string name="low_storage_warning_message">יש צורך במחיקת הודעות/אפליקציות לפעילות תקינה של המכשיר.</string>
-    
+     -->
     <string name="low_storage_critical_title">שים לב, אין די זיכרון פנוי במכשיר!</string>
     <string name="low_storage_critical_message">לא יתקבלו הודעות חדשות ללא מחיקת הודעות/אפליקציות במכשיר.</string>
 </resources>

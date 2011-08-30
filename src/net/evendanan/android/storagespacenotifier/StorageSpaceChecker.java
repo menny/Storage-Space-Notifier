@@ -31,10 +31,11 @@ public class StorageSpaceChecker {
 			StatFs stat = new StatFs(path.getPath());
 			final long deviceInternalSpaceFreeSpace = (stat.getBlockSize() * stat.getAvailableBlocks());
 			Resources res = cntxt.getResources();
-			final int warningLimit = res.getInteger(R.integer.storage_space_check_warning_bytes_limit);
+			//final int warningLimit = res.getInteger(R.integer.storage_space_check_warning_bytes_limit);
 			final int criticalLimit = res.getInteger(R.integer.storage_space_check_critical_bytes_limit);
 			
-			Log.d(TAG, "Storage related event occour. Free storage: "+deviceInternalSpaceFreeSpace+" bytes. Warning limit: "+warningLimit+" bytes, critical limits : "+criticalLimit+" bytes.");
+			//Log.d(TAG, "Storage related event occour. Free storage: "+deviceInternalSpaceFreeSpace+" bytes. Warning limit: "+warningLimit+" bytes, critical limits : "+criticalLimit+" bytes.");
+			Log.d(TAG, "Storage related event occour. Free storage: "+deviceInternalSpaceFreeSpace+" bytes. Critical limit : "+criticalLimit+" bytes.");
 			
 			NotificationManager nm = (NotificationManager)cntxt.getSystemService(Context.NOTIFICATION_SERVICE);
 			
@@ -55,7 +56,7 @@ public class StorageSpaceChecker {
 				// notifying
 				nm.notify(NOTIFICATION_ID, notification);
 			}
-			else if (deviceInternalSpaceFreeSpace <= warningLimit)
+			/*else if (deviceInternalSpaceFreeSpace <= warningLimit)
 			{
 				Notification notification = new Notification(R.drawable.icon, res.getText(R.string.low_storage_warning_title), System.currentTimeMillis());
 
@@ -70,7 +71,7 @@ public class StorageSpaceChecker {
 				notification.flags |= Notification.FLAG_ONLY_ALERT_ONCE;
 				// notifying
 				nm.notify(NOTIFICATION_ID, notification);
-			}
+			}*/
 			else
 			{
 				nm.cancel(NOTIFICATION_ID);

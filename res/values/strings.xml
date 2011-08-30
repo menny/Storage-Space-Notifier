@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Beres Storage Space Notifier</string>
-    
+    <!-- 
     <string name="low_storage_warning_title">Low free storage!</string>
     <string name="low_storage_warning_message">It is required to delete SMS/Apps to ensure proper device function</string>
-    
+     -->
     <string name="low_storage_critical_title">Very low free storage!!</string>
     <string name="low_storage_critical_message">No SMS will be received until you delete SMS/Apps!</string>
 </resources>
