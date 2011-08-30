@@ -6,5 +6,9 @@
     <string name="low_storage_warning_message">It is required to delete SMS/Apps to ensure proper device function</string>
      -->
     <string name="low_storage_critical_title">Very low free storage!!</string>
+    <string name="low_storage_critical_notification_text">Press to manage apps</string>
     <string name="low_storage_critical_message">No SMS will be received until you delete SMS/Apps!</string>
+    
+    <string name="popup_button_manage">Manage apps</string>
+    <string name="popup_button_cancel">Later</string>
 </resources>

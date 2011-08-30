@@ -15,7 +15,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Environment;
 import android.os.StatFs;
-import android.provider.Settings;
 import android.util.Log;
 
 public class StorageSpaceChecker {
@@ -43,12 +42,14 @@ public class StorageSpaceChecker {
 			{
 				Notification notification = new Notification(R.drawable.icon, res.getText(R.string.low_storage_critical_title), System.currentTimeMillis());
 
-				Intent notificationIntent = new Intent(Settings.ACTION_MANAGE_APPLICATIONS_SETTINGS);
+				Intent notificationIntent = new Intent(cntxt, PopupActivity.class);
+				notification.flags = Intent.FLAG_ACTIVITY_NEW_TASK;
+				
 				PendingIntent contentIntent = PendingIntent.getActivity(cntxt, 0, notificationIntent, 0);
 
 				notification.setLatestEventInfo(cntxt,
 						res.getText(R.string.low_storage_critical_title), 
-						res.getText(R.string.low_storage_critical_message),
+						res.getText(R.string.low_storage_critical_notification_text),
 						contentIntent);
 				notification.flags |= Notification.FLAG_ONGOING_EVENT;
 				notification.flags |= Notification.FLAG_NO_CLEAR;

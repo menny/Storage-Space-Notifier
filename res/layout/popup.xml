@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" 
+	android:layout_width="wrap_content" android:layout_height="wrap_content"
+	android:orientation="vertical">
+	<!-- 
+	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:gravity="center" android:layout_gravity="center" android:padding="8dp"
+		android:text="@string/low_storage_critical_title"/>
+	 -->
+	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+		android:gravity="center" android:layout_gravity="center" android:padding="8dp" android:layout_marginTop="4dp" android:layout_marginBottom="4dp"
+		android:text="@string/low_storage_critical_message"/>
+	<!-- 
+	<LinearLayout android:orientation="horizontal" android:layout_gravity="center" android:layout_width="fill_parent" android:padding="4dp" android:weightSum="2.5" android:background="#666" android:layout_height="42dp">
+		<View android:layout_width="0px" android:layout_weight="0.25" android:layout_height="1px"/>
+		<Button android:onClick="onUserClickedManageApps" android:layout_width="0px" android:layout_weight="1" android:layout_height="wrap_content"
+			android:text="@string/popup_button_manage" android:layout_gravity="center"/>
+		<View android:layout_width="8dp" android:layout_height="1px"/>
+		<Button android:onClick="onUserClickedCancel" android:layout_width="0px" android:layout_weight="1" android:layout_height="wrap_content"
+			android:text="@string/popup_button_cancel" android:layout_gravity="center"/>
+		<View android:layout_width="0px" android:layout_weight="0.25" android:layout_height="1px"/>
+	</LinearLayout>
+	 -->
+	 <LinearLayout android:orientation="horizontal" android:layout_gravity="center" android:layout_width="fill_parent" android:padding="4dp" android:weightSum="2" android:background="#666" android:layout_height="wrap_content">
+		<View android:layout_width="0px" android:layout_weight="1" android:layout_height="1px"/>
+		<Button android:onClick="onUserClickedManageApps" android:layout_width="wrap_content" android:layout_height="wrap_content"
+			android:text="@string/popup_button_manage" android:padding="8dp"/>
+		<View android:layout_width="0px" android:layout_weight="1" android:layout_height="1px"/>
+	</LinearLayout>
+</LinearLayout>
