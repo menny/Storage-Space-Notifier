@@ -4,5 +4,5 @@
 	<!-- 
 	<integer name="storage_space_check_warning_bytes_limit">15000000</integer>
 	 -->
-	<integer name="storage_space_check_critical_bytes_limit">20000000</integer>
+	<integer name="storage_space_check_critical_bytes_limit">26214400</integer>
 </resources>
