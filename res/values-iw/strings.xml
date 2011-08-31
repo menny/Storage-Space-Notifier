@@ -6,7 +6,7 @@
      -->
     <string name="low_storage_critical_title">שים לב, אין די זיכרון פנוי במכשיר!</string>
     <string name="low_storage_critical_notification_text">לחץ לניהול אפליקציות</string>
-    <string name="low_storage_critical_message">לא יתקבלו הודעות חדשות ללא מחיקת הודעות/אפליקציות במכשיר.</string>
+    <string name="low_storage_critical_message">לא יתקבלו הודעות חדשות ללא מחיקת\nהודעות/אפליקציות במכשיר.</string>
     
     
     <string name="popup_button_manage">מחק אפליקציות</string>

@@ -8,8 +8,8 @@
 		android:text="@string/low_storage_critical_title"/>
 	 -->
 	<TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-		android:textStyle="bold"
-		android:gravity="center" android:layout_gravity="center" android:padding="8dp" android:layout_marginTop="4dp" android:layout_marginBottom="4dp"
+		android:gravity="center" android:layout_gravity="center" android:padding="8dp" android:layout_marginBottom="4dp"
+		android:textSize="18sp" android:textStyle="bold"
 		android:text="@string/low_storage_critical_message"/>
 	<!-- 
 	<LinearLayout android:orientation="horizontal" android:layout_gravity="center" android:layout_width="fill_parent" android:padding="4dp" android:weightSum="2.5" android:background="#666" android:layout_height="42dp">
